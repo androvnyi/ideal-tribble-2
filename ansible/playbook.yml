@@ -1,0 +1,25 @@
+- hosts: all
+  become: true
+  tasks:
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Start and enable Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Run Nginx container
+      docker_container:
+        name: nginx
+        image: nginx:latest
+        ports:
+          - "80:80"
