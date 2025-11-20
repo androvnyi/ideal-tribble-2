@@ -7,7 +7,7 @@ End-to-end Infrastructure as Code project using Terraform and Ansible.
 - Create AWS network infrastructure via Terraform.
 - Deploy EC2 instance with public subnet and internet access.
 - Configure server automatically via Ansible (Docker + Nginx).
-- Store state and artifacts in S3.
+- Store state and artifacts in S3..
 
 ---
 
